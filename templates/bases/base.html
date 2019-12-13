@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
    <!-- Basic -->
@@ -44,25 +43,33 @@
       <!-- END LOADER -->
       <section id="top">
          <header>
-            <div class="container">
-               <div class="header-top">
-                  <div class="row">
-                     <div class="col-md-6">
-                        <div class="full">
-                           <div class="logo">
-                                 <a class="sport_hub" href="{% url 'pole_list' %}"><img class="icon_image" src="{% static 'css/../../static/images/sport_hub.jpeg' %}"></a>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-6">
-                        <div class="right_top_section">
-                           <!-- social icon -->
-                           <ul class="social-icons pull-left">
-                              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                           </ul>
-                           <!-- end social icon -->
-                           <!-- button section -->
-                           <ul class="login">
+             <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="nav navbar-nav">
+                                          <li class="active"><a href="{% url 'blog' %}">Главная</a></li>
+                                          <li><a href="{% url 'about' %}">Футбол</a></li>
+                                          <li><a href="{% url 'team' %}">Баскетболл</a></li>
+                                          <li><a href="{% url 'news' %}">Волейбол</a></li>
+                                          <li><a href="{% url 'pole_list' %}">Теннис</a></li>
+                                          <li><a href="{% url 'contact' %}">Боулинг</a></li>
+                                       </ul>
+                <a class="navbar-brand page-scroll" href="#page-top"> </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+{#            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">#}
+                <ul class="login nav navbar-nav navbar-right">
+                    <li class=" hidden active">
+                        <a href="#page-top"></a>
+                    </li>
                                {% if user.is_authenticated %}
                                <li class="login-modal">
                                  <a href="{% url 'pole_new' %}" class="login"><i class="fa fa-user"></i>Добавить поле</a>
@@ -81,43 +88,24 @@
                               </li>
                            </ul>
                             {% endif %}
-                           <!-- end button section -->
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="header-bottom">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <div class="full">
-                           <div class="main-menu-section">
-                              <div class="menu">
-                                 <nav class="navbar navbar-inverse">
-                                    <div class="navbar-header">
-                                       <a class="navbar-brand" href="#">Меню</a>
-                                    </div>
-                                    <div class="collapse navbar-collapse js-navbar-collapse">
-                                       <ul class="nav navbar-nav">
-                                          <li class="active"><a href="{% url 'pole_list' %}">Главная</a></li>
-                                          <li><a href="{% url 'about' %}">Футбол</a></li>
-                                          <li><a href="{% url 'team' %}">Баскетболл</a></li>
-                                          <li><a href="{% url 'news' %}">Волейбол</a></li>
-                                          <li><a href="{% url 'blog' %}">Теннис</a></li>
-                                          <li><a href="{% url 'contact' %}">Боулинг</a></li>
-                                       </ul>
-                                    </div>
-                                    <!-- /.nav-collapse -->
-                                 </nav>
-                                 <div class="search-bar">
-                                    <div id="imaginary_container">
-                                       <div class="input-group stylish-input-group">
-                                          <input type="text" class="form-control"  placeholder="Search" >
-                                          <span class="input-group-addon">
-                                          <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+{#             #}
+{#                                 <div class="search-bar">#}
+{#                                    <div id="imaginary_container">#}
+{#                                       <div class="input-group stylish-input-group">#}
+{#                                          <input type="text" class="form-control"  placeholder="Search" >#}
+{#                                          <span class="input-group-addon">#}
+{#                                          <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>#}
+{#                                          </span>#}
+{#                                       </div>#}
+{#                                    </div>#}
+{#                                 </div>#}
                               </div>
                            </div>
                         </div>
@@ -127,13 +115,12 @@
             </div>
          </header>
       </section>
-    <div style="margin-top: 350px;">
+    <div>
           {% block content %}
 
           {% endblock content %}
 
     </div>
-
                 <footer id="footer" class="footer">
          <div class="container">
             <div class="row">
@@ -193,3 +180,71 @@
       <script src="{% static  'js/custom.js' %}"></script>
    </body>
 </html>
+
+
+
+{#            <div class="container">#}
+{#               <div class="header-top">#}
+{#                  <div class="row">#}
+{#                     <div class="col-md-6">#}
+{#                        <div class="full">#}
+{#                           <div class="logo">#}
+{#                                 <a class="sport_hub" href="{% url 'pole_list' %}"><img class="icon_image" src="{% static 'css/../../static/images/sport_hub.jpeg' %}"></a>#}
+{#                           </div>#}
+{#                        </div>#}
+{#                     </div>#}
+{#                     <div class="col-md-6">#}
+{#                        <div class="right_top_section">#}
+{#                           <!-- social icon -->#}
+{#                           <ul class="social-icons pull-left">#}
+{#                              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>#}
+{#                           </ul>#}
+{#                           <!-- end social icon -->#}
+{#                           <!-- button section -->#}
+{#                           <ul class="login">#}
+{#                               {% if user.is_authenticated %}#}
+{#                               <li class="login-modal">#}
+{#                                 <a href="{% url 'pole_new' %}" class="login"><i class="fa fa-user"></i>Добавить поле</a>#}
+{#                              </li>#}
+{#                                   <li class="login-modal">#}
+{#                                 <a href="{% url 'logout' %}" class="login"><i class="fa fa-user"></i>Выйти</a>#}
+{#                              </li>#}
+{#                               {% else %}#}
+{#                              <li class="login-modal">#}
+{#                                 <a href="{% url 'login' %}" class="login"><i class="fa fa-user"></i>Войти</a>#}
+{#                              </li>#}
+{#                              <li>#}
+{#                                 <div class="cart-option">#}
+{#                                    <a href="{% url 'register' %}"><i class="fa fa-shopping-cart"></i>Регистрация</a>#}
+{#                                 </div>#}
+{#                              </li>#}
+{#                           </ul>#}
+{#                            {% endif %}#}
+{#                           <!-- end button section -->#}
+{#                        </div>#}
+{#                     </div>#}
+{#                  </div>#}
+{#               </div>#}
+{#               <div class="header-bottom">#}
+{#                  <div class="row">#}
+{#                     <div class="col-md-12">#}
+{#                        <div class="full">#}
+{#                           <div class="main-menu-section">#}
+{#                              <div class="menu">#}
+{#                                 <nav class="navbar navbar-inverse">#}
+{#                                    <div class="navbar-header">#}
+{#                                       <a class="navbar-brand" href="#">Меню</a>#}
+{#                                    </div>#}
+{#                                    <div class="collapse navbar-collapse js-navbar-collapse">#}
+{#                                       <ul class="nav navbar-nav">#}
+{#                                          <li class="active"><a href="{% url 'pole_list' %}">Главная</a></li>#}
+{#                                          <li><a href="{% url 'about' %}">Футбол</a></li>#}
+{#                                          <li><a href="{% url 'team' %}">Баскетболл</a></li>#}
+{#                                          <li><a href="{% url 'news' %}">Волейбол</a></li>#}
+{#                                          <li><a href="{% url 'blog' %}">Теннис</a></li>#}
+{#                                          <li><a href="{% url 'contact' %}">Боулинг</a></li>#}
+{#                                       </ul>#}
+{#                                    </div>#}
+{#                                    <!-- /.nav-collapse -->#}
+{#                                 </nav>#}
+

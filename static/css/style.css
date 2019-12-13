@@ -387,11 +387,26 @@ a img.aligncenter {
 	font-style: normal;
 	font-weight: 400;
 	text-transform: capitalize;
-	background-color: transparent;
+	background-color: #3e941a;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #151313;
+}
+.login li a {
+    padding: 9px 25px;
+    color: #131111;
+    font-size: 13px;
+    border-radius: 50px;
+    float: left;
 }
 
 .header_style_01 .navbar-default .navbar-nav>li a {
-	background-color: transparent !important;
+	color: #1b1818;
+	 padding: 9px 25px;
+    color: #131111;
+    font-size: 13px;
+    border-radius: 50px;
+    float: left;
 }
 
 .header_style_01 .navbar-default .navbar-nav>li:hover a,
@@ -2188,11 +2203,8 @@ section.team h4 {
 }
 
 
-
-
-
 .card-page-img-container {
-    height: 25vw;
+    height: 125rem;
     overflow: hidden;
     position: relative;
 }
@@ -2200,7 +2212,7 @@ section.team h4 {
 	position: absolute;
     width: 100%;
     top: 50%;
-    transform: translate(0, -40%);
+    transform: translate(0, -50%);
 }
 
 .cards-container {
@@ -2252,4 +2264,96 @@ p.card-avtor {
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
+
+.navbar-default {
+    border-color: transparent;
+    background-color: #222;
+}
+
+.navbar-default .navbar-brand {
+    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    color: #1ee2e7;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand.active {
+    color: #fec503;
+}
+
+.navbar-default .navbar-collapse {
+    border-color: rgba(255,255,255,.02);
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #1ee2e7;
+    background-color: #1ee2e7;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #1ee2e7;
+}
+
+.navbar-default .nav li a {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.navbar-default .nav li a:hover,
+.navbar-default .nav li a:focus {
+    outline: 0;
+    color: #3d8f11;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    border-radius: 0;
+    color: #fff;
+    background-color: #3d8f11;
+}
+
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #fff;
+    background-color: #3d8f11;
+}
+
+@media(min-width:768px) {
+    .navbar-default {
+        padding: 25px 0;
+        border: 0;
+        background-color: transparent;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
+    }
+
+    .navbar-default .navbar-brand {
+        font-size: 2em;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .navbar-default .navbar-nav>.active>a {
+        border-radius: 3px;
+    }
+
+    .navbar-default.navbar-shrink {
+        padding: 10px 0;
+        background-color: #222;
+    }
+
+    .navbar-default.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+    }
 }

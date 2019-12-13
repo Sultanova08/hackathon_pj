@@ -47,8 +47,6 @@ class PoleListView(LoginRequiredMixin, ListView):
     login_url = 'login'
 
 
-
-
 class PoleDetailView(FormView, DetailView):
     model = Pole
     form_class = FieldImageCreateForm
